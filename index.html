@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoodMix</title>
+    <meta name="description" content="MoodMix recommends songs based on your current mood." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">♪</span>
+        <div>
+          <h1>MoodMix</h1>
+          <p class="tagline">Music that matches how you feel</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="filter-group" role="group" aria-label="Recommendation filter">
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">
+            All
+          </button>
+          <button class="filter-btn" type="button" data-filter="favorites" aria-pressed="false">
+            Favorites
+          </button>
+        </div>
+
+        <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light theme">
+          <span class="theme-icon" aria-hidden="true">🌙</span>
+          <span class="theme-label">Dark</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="mood-section" aria-labelledby="mood-heading">
+        <h2 id="mood-heading">How are you feeling?</h2>
+        <p class="section-copy">Pick a mood and we’ll mix five songs that fit the moment.</p>
+        <div class="mood-grid"></div>
+      </section>
+
+      <section class="results-section" aria-labelledby="results-heading">
+        <div class="results-header">
+          <h2 id="results-heading">Recommendations</h2>
+          <p class="mood-description" hidden></p>
+        </div>
+        <div class="song-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built with HTML, CSS, and JavaScript. Song links open a YouTube search in a new tab.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
